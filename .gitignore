@@ -1,0 +1,18 @@
+# Environment
+env/
+.env
+*.pyc
+__pycache__/
+
+# Logs (zu groß, privat)
+logs/
+
+# Output (kann regeneriert werden)
+data/output/
+
+# IDE
+.vscode/
+.idea/
+
+# System
+.DS_Store

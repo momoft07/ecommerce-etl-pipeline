@@ -1,0 +1,39 @@
+# E-Commerce ETL Pipeline
+
+Simple but professional ETL pipeline: Join 3 tables, aggregate customer spending, output to CSV + Parquet.
+
+## Project Structure
+
+ecommerce-etl-pipeline/
+├── main.py # Main ETL script
+├── requirements.txt # Python dependencies
+├── README.md # This file
+├── data/
+│ ├── raw/ # Input CSVs/Database exports
+│ └── output/ # Output files (CSV, Parquet)
+└── logs/ # Log files (auto-created)
+
+## What This Does
+
+1. **Extract**: Load 3 tables from PostgreSQL (customers, orders, products)
+2. **Transform**: Join tables, aggregate spending per customer, validate data
+3. **Load**: Save output as CSV + Parquet
+
+## Setup
+
+```bash
+python -m venv env
+source env/bin/activate  # Windows: env\Scripts\activate
+pip install -r requirements.txt
+```
+
+## Run
+
+```bash
+python main.py
+```
+
+## Output
+
+- `data/output/customer_spending.csv` - Clean aggregated data
+- `logs/etl_YYYY-MM-DD_HH-MM-SS.log` - Execution log
